@@ -1,4 +1,4 @@
-class SpotsController < ApplicationController
+class Api::V1::SpotsController < ApplicationController
   before_action :set_spot, only: [:show, :update, :destroy]
 
   # GET /spots
