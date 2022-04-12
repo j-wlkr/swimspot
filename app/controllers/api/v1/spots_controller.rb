@@ -18,7 +18,7 @@ class Api::V1::SpotsController < ApplicationController
     @spot = Spot.new(spot_params)
 
     if @spot.save
-      render json: @spot, status: :created, location: @spot
+      render json: @spot, status: :created, location: api_v1_spots_path(@spot)
     else
       render json: @spot.errors, status: :unprocessable_entity
     end
